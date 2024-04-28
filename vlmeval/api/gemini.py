@@ -4,11 +4,18 @@ from vlmeval.api.base import BaseAPI
 headers = 'Content-Type: application/json'
 
 
+MODEL_DICT = {
+    "1": "gemini-pro-vision",
+    "1.5": "gemini-1.5-pro-latest"
+}
+
+
 class GeminiWrapper(BaseAPI):
 
     is_api: bool = True
 
     def __init__(self,
+                 version: str = "1",
                  retry: int = 5,
                  wait: int = 5,
                  key: str = None,
@@ -18,6 +25,8 @@ class GeminiWrapper(BaseAPI):
                  max_tokens: int = 1024,
                  proxy: str = None,
                  **kwargs):
+        self.version = version
+        assert self.version in ["1", "1.5"]
 
         self.fail_msg = 'Failed to obtain answer via API. '
         self.max_tokens = max_tokens
@@ -44,7 +53,7 @@ class GeminiWrapper(BaseAPI):
         assert isinstance(inputs, list)
         pure_text = np.all([x['type'] == 'text' for x in inputs])
         genai.configure(api_key=self.api_key)
-        model = genai.GenerativeModel('gemini-pro') if pure_text else genai.GenerativeModel('gemini-pro-vision')
+        model = genai.GenerativeModel('gemini-pro') if pure_text else genai.GenerativeModel(MODEL_DICT[self.version])
         messages = self.build_msgs(inputs)
         gen_config = dict(max_output_tokens=self.max_tokens, temperature=self.temperature)
         gen_config.update(kwargs)
