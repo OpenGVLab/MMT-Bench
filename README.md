@@ -17,46 +17,59 @@ This repository is the official implementation of [MMT-Bench](https://arxiv.org/
 > <sup>\*</sup> KY, FM and JW contribute equally.  
 > <sup>\#</sup> WS (shaowenqi@pjlab.org.cn) and KZ (zhangkaipeng@pjlab.org.cn) are correponding authors. 
 
+## Introduction
+MMT-Bench is a comprehensive benchmark designed to assess LVLMs across massive multimodal tasks requiring expert knowledge and deliberate visual recognition, localization, reasoning, and planning. MMT-Bench comprises 31, 325 meticulously curated multi-choice visual questions from various multimodal scenarios such as vehicle driving and embodied navigation, covering 32 core meta-tasks and 162 subtasks in multimodal understanding.
 ![overview](assets/overview.jpg)
+
+## Evaluation Results Overview
+- The closed-source proprietary model GPT-4o from OpenAI has taken a leading position in MMT-Bench, surpassing other models such as InternVL-chat, QWen-VL-Plus, GPT-4V, and GeminiProVision. Note that the open-source models InternVL-chat and QwenVL-Max closely follow GPT-4o.
+![overview](assets/overall_progress.png)
+
+- GPT-4o performs well in visual recognition and captioning and improves a lot in visual perception compared with GPT-4V (20231106 & 20240409).
+![overview](assets/metatask_eval.png)
+
 
 ## 🏆 Leaderboard
 
 ### Full Set
 
-| Rank | Model                 | Overall |
-|------|-----------------------|---------|
-| 1    | InternVL-Chat-v1.2    | 63.4    |
-| 2    | Qwen-VL-Plus          | 62.3    |
-| 3    | GPT-4V                | 62.0    |
-| 4    | GeminiProVision       | 61.6    |
-| 5    | LLaVA-NEXT-34B        | 60.8    |
-| 6    | XComposer2            | 55.7    |
-| 7    | BLIP2                 | 54.8    |
-| 8    | Yi-VL-34B             | 54.2    |
-| 9    | Monkey-Chat           | 53.4    |
-| 10   | DeepSeek-VL-7B        | 53.2    |
-| 11   | Yi-VL-6B              | 53.2    |
-| 12   | LLaVA-NEXT-13B        | 53.0    |
-| 13   | TransCore-M           | 52.7    |
-| 14   | QWen-VL-Chat          | 52.5    |
-| 15   | Claude3V-Haiku        | 52.2    |
-| 16   | XComposer             | 52.1    |
-| 17   | mPLUG-Owl2            | 52.0    |
-| 18   | RBDash-v1-13B         | 51.8    |
-| 19   | LLaVA-v1.5-13B        | 51.7    |
-| 20   | CogVLM-Chat           | 51.6    |
-| 21   | ShareGPT4V-7B         | 51.5    |
-| 22   | LLaVA-NEXT-7B         | 51.1    |
-| 23   | LLaVA-v1.5-13B-XTuner | 51.1    |
-| 24   | LLaVA-InternLM2-7B    | 50.8    |
-| 25   | LLaVA-v1.5-7B-XTuner  | 50.2    |
-| 26   | SharedCaptioner       | 49.9    |
-| 27   | LLaVA-InternLM-7B     | 49.7    |
-| 28   | LLaVA-v1.5-7B         | 49.5    |
-| 29   | LLaMA-Adapter-v2-7B   | 40.4    |
-| 30   | VisualGLM-6B          | 38.6    |
-| 31   | Frequency Guess       | 31.7    |
-| 32   | Random Guess          | 28.5    |
+| Rank | Model                       | Score |
+|------|-----------------------------|-------|
+| 1    | GPT4o                       | 65.5  |
+| 2    | InternVL-Chat-v1.2-34B      | 63.4  |
+| 3    | QwenVLMax                   | 62.4  |
+| 4    | Qwen-VL-Plus                | 62.3  |
+| 5    | GeminiProVision             | 61.6  |
+| 6    | GPT4V_20240409              | 61.1  |
+| 7    | LLaVA-NEXT-34B              | 60.8  |
+| 8    | XComposer2                  | 55.7  |
+| 9    | BLIP2                       | 54.8  |
+| 10   | GPT4V_20231106              | 54.7  |
+| 11   | Yi-VL-34B                   | 54.2  |
+| 12   | Monkey-Chat                 | 53.4  |
+| 13   | DeepSeek-VL-7B              | 53.2  |
+| 14   | Yi-VL-6B                    | 53.2  |
+| 15   | LLaVA-NEXT-13B              | 53.0  |
+| 16   | TransCore-M                 | 52.7  |
+| 17   | QWen-VL-Chat                | 52.5  |
+| 18   | Claude3V_Haiku              | 52.2  |
+| 19   | XComposer                   | 52.1  |
+| 20   | mPLUG-Owl2                  | 52.0  |
+| 21   | RBDash-v1-13B               | 51.8  |
+| 22   | LLaVA-v1.5-13B              | 51.7  |
+| 23   | CogVLM-Chat                 | 51.6  |
+| 24   | ShareGPT4V-7B               | 51.5  |
+| 25   | LLaVA-NEXT-7B               | 51.1  |
+| 26   | LLaVA-v1.5-13B-XTuner       | 51.1  |
+| 27   | LLaVA-InternLM2-7B          | 50.8  |
+| 28   | LLaVA-v1.5-7B-XTuner        | 50.2  |
+| 29   | SharedCaptioner             | 49.9  |
+| 30   | LLaVA-InternLM-7B           | 49.7  |
+| 31   | LLaVA-v1.5-7B               | 49.5  |
+| 32   | LLaMA-Adapter-v2-7B         | 40.4  |
+| 33   | VisualGLM-6B                | 38.6  |
+| 34   | Frequency Guess             | 31.7  |
+| 35   | Random Guess                | 28.5  |
 
 ### VAL Split
 
