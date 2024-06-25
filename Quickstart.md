@@ -2,9 +2,20 @@
 
 ## Prepare the Dataset
 
-You can download the MMT-Bench dataset in the following links: [HuggingFace](https://huggingface.co/datasets/Kaining/MMT-Bench/blob/main/MMT-Bench_VAL.tsv). **Note**: We only provide `VAL` split now. And we will support `TEST` split in the furture.
+VLMEvalKit now supports MMT-Bench, and the built-in functions will automatically download when you first use them.
+You can also download the MMT-Bench dataset in the following links: [HuggingFace](https://huggingface.co/datasets/OpenGVLab/MMT-Bench), [ModelScope](https://modelscope.cn/datasets/OpenGVLab/MMT-Bench). 
 
-Put the data under the `LMUData/`
+We have provided four dataset files:
+
+- MMT-Bench_VAL: Used for local model evaluation (10% of the samples), where multiple images in multi-image samples are combined into a single image.
+- MMT-Bench_VAL_MI: Used for local model evaluation (10% of the samples), but multi-image samples are stored as separate images.
+- MMT-Bench_ALL: The FULL set (100% of the samples) evaluated on [this server](https://eval.ai/web/challenges/challenge-page/2328/overview), where multiple images in multi-image samples are combined into a single image.
+- MMT-Bench_ALL_MI: Also the FULL set (100% of the samples) evaluated on [this server](https://eval.ai/web/challenges/challenge-page/2328/overview), but multi-image samples are stored as separate images.
+
+***Note**: "MI" indicates that multi-image tasks are preserved in their original format, without "MI" indicating that multi-images are combined into a single image for evaluation. The evaluation of single-image tasks remains the same in both cases. We recommend that LVLM models capable of handling multi-image inputs use the MI files (MMT-Bench_VAL_MI, MMT-Bench_ALL_MI) for evaluation, while those not supporting multi-image inputs should use the combined version (MMT-Bench_VAL, MMT-Bench_ALL) for testing.*
+
+
+Put the data under the `~/LMUData/`
 
 ## Step 0. Installation & Setup essential keys
 

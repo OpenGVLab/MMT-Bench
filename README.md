@@ -1,14 +1,16 @@
+# Best Practice
+
+Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) supports MMT-Bench now! **We strongly recommend using [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) for its useful features and ready-to-use LVLM implementations**.
+
 # MMT-Bench
 
 <p align="left">
   <a href="#🚀-quick-start"><b>Quick Start</b></a> |
   <a href="https://mmt-bench.github.io/"><b>HomePage</b></a> |
   <a href="https://arxiv.org/abs/2404.16006"><b>arXiv</b></a> |
-  <a href="https://huggingface.co/datasets/Kaining/MMT-Bench"><b>Dataset</b></a> |
+  <a href="https://huggingface.co/datasets/OpenGVLab/MMT-Bench"><b>Dataset</b></a> |
   <a href="#🖊️-citation"><b>Citation</b></a> <br>
-
 </p>
-
 
 This repository is the official implementation of [MMT-Bench](https://arxiv.org/abs/2404.16006). 
 
@@ -16,6 +18,15 @@ This repository is the official implementation of [MMT-Bench](https://arxiv.org/
 > Kaining Ying<sup>\*</sup>, Fanqing Meng<sup>\*</sup>, Jin Wang<sup>\*</sup>, Zhiqian Li, Han Lin, Yue Yang, Hao Zhang, Wenbo Zhang, Yuqi Lin, Shuo Liu, jiayi lei, Quanfeng Lu, Peng Gao, Runjian Chen, Peng Xu, Renrui Zhang, Haozhe Zhang, Yali Wang, Yu Qiao, Ping Luo, Kaipeng Zhang<sup>\#</sup>, Wenqi Shao<sup>\#</sup>  
 > <sup>\*</sup> KY, FM and JW contribute equally.  
 > <sup>\#</sup> WS (shaowenqi@pjlab.org.cn) and KZ (zhangkaipeng@pjlab.org.cn) are correponding authors. 
+
+## 💡 News
+
+- `2024/04/24`: The technical report of [MMT-Bench](https://arxiv.org/abs/2404.16006) is released! And check our [project page](https://mmt-bench.github.io/)!
+- `2024/04/26`: We release the evaluation code and the `VAL` split.
+- `2024/05/01`: MMT-Bench is accepted by ICML 2024. See you in Vienna! 🇦🇹🇦🇹🇦🇹
+- `2024/06/17`: Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) supports MMT-Bench now! **We strongly recommend using [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) for its useful features and ready-to-use LVLM implementations**.
+- `2024/06/25`: The evaluation of `ALL` split is host on the [EvalAI](https://eval.ai/web/challenges/challenge-page/2328/overview).
+- `2024/06/25`: We release the `ALL` split and `VAL` split.
 
 ## Introduction
 MMT-Bench is a comprehensive benchmark designed to assess LVLMs across massive multimodal tasks requiring expert knowledge and deliberate visual recognition, localization, reasoning, and planning. MMT-Bench comprises 31, 325 meticulously curated multi-choice visual questions from various multimodal scenarios such as vehicle driving and embodied navigation, covering 32 core meta-tasks and 162 subtasks in multimodal understanding.
@@ -70,22 +81,6 @@ MMT-Bench is a comprehensive benchmark designed to assess LVLMs across massive m
 | 33   | VisualGLM-6B                | 38.6  |
 | 34   | Frequency Guess             | 31.7  |
 | 35   | Random Guess                | 28.5  |
-
-### VAL Split
-
-Coming soon.
-
-### TEST Split
-
-Coming soon.
-
-
-
-## 💡 News
-
-- `2024/04/24`: The technical report of [MMT-Bench](https://arxiv.org/abs/2404.16006) is released! And check our [project page](https://mmt-bench.github.io/)!
-- `2024/04/26`: We release the evaluation code and the `VAL` split.
-
 
 
 ## 🚀 Quick Start
