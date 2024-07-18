@@ -21,12 +21,17 @@ This repository is the official implementation of [MMT-Bench](https://arxiv.org/
 
 ## 💡 News
 
-- `2024/04/24`: The technical report of [MMT-Bench](https://arxiv.org/abs/2404.16006) is released! And check our [project page](https://mmt-bench.github.io/)!
-- `2024/04/26`: We release the evaluation code and the `VAL` split.
-- `2024/05/01`: MMT-Bench is accepted by ICML 2024. See you in Vienna! 🇦🇹🇦🇹🇦🇹
-- `2024/06/17`: Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) supports MMT-Bench now! **We strongly recommend using [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) for its useful features and ready-to-use LVLM implementations**.
+
+
+
+- `2024/07/18`: We release the Leaderboard of `VAL` split. Download dataset [here](https://huggingface.co/datasets/Kaining/MMT-Bench)
+- `2024/06/25`: We release the `ALL` split and `VAL` split. 
 - `2024/06/25`: The evaluation of `ALL` split is host on the [EvalAI](https://eval.ai/web/challenges/challenge-page/2328/overview).
-- `2024/06/25`: We release the `ALL` split and `VAL` split.
+- `2024/06/17`: Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) supports MMT-Bench now! **We strongly recommend using [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) for its useful features and ready-to-use LVLM implementations**.
+- `2024/05/01`: MMT-Bench is accepted by ICML 2024. See you in Vienna! 🇦🇹🇦🇹🇦🇹
+- `2024/04/26`: We release the evaluation code and the `VAL` split.
+- `2024/04/24`: The technical report of [MMT-Bench](https://arxiv.org/abs/2404.16006) is released! And check our [project page](https://mmt-bench.github.io/)!
+
 
 ## Introduction
 MMT-Bench is a comprehensive benchmark designed to assess LVLMs across massive multimodal tasks requiring expert knowledge and deliberate visual recognition, localization, reasoning, and planning. MMT-Bench comprises 31, 325 meticulously curated multi-choice visual questions from various multimodal scenarios such as vehicle driving and embodied navigation, covering 32 core meta-tasks and 162 subtasks in multimodal understanding.
@@ -41,6 +46,43 @@ MMT-Bench is a comprehensive benchmark designed to assess LVLMs across massive m
 
 
 ## 🏆 Leaderboard
+
+
+### Val Set
+
+| Rank | Model                         | Score |
+|------|-------------------------------|-------|
+| 1    | InternVL2-40B                 | 66.9  |
+| 2    | GPT4o                         | 65.4  |
+| 3    | GeminiPro1-5                  | 64.5  |
+| 4    | GPT4V-20240409-HIGH           | 64.3  |
+| 4    | InternVL-Chat-V1-2            | 64.3  |
+| 6    | Claude3-Opus                  | 62.5  |
+| 7    | InternVL2-26B                 | 60.6  |
+| 8    | LLavA-next-Yi-34B             | 60.4  |
+| 9    | InternVL2-8B                  | 60.0  |
+| 10   | QwenVLMax                     | 59.7  |
+| 11   | GeminiProVision               | 59.1  |
+| 12   | Mini-InternVL-Chat-4B-V1-5    | 58.4  |
+| 13   | XComposer2                    | 56.3  |
+| 14   | Yi-VL-6B                      | 54.7  |
+| 15   | Phi-3-Vision                  | 54.5  |
+| 15   | TransCore-M                   | 54.5  |
+| 17   | deepseek-vl-7B                | 54.0  |
+| 17   | Yi-VL-34B                     | 54.0  |
+| 19   | LLavA-internlm2-7B            | 53.4  |
+| 19   | Monkey-Chat                   | 53.4  |
+| 21   | LLavA-next-vicuna-13B         | 52.4  |
+| 22   | LLavA-v1.5-13B                | 52.1  |
+| 23   | sharegpt4v-7B                 | 51.6  |
+| 24   | LLavA-v1.5-13B-xtuner         | 50.7  |
+| 25   | mPLUG-Owl2                    | 50.5  |
+| 26   | LLavA-next-vicuna-7B          | 50.4  |
+| 27   | LLavA-v1.5-7B                 | 49.6  |
+| 28   | LLavA-v1.5-7B-xtuner          | 49.3  |
+| 29   | LLavA-internlm-7B             | 48.3  |
+| 30   | Qwen-Chat                     | 47.9  |
+| 30   | sharecaptioner                | 47.9  |
 
 ### Full Set
 
