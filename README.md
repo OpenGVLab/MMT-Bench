@@ -1,3 +1,5 @@
+# ⚠️⚠️⚠️ ALL split annotation is available at [here](https://github.com/OpenGVLab/MMT-Bench/releases/download/all_anno/MMT-Bench_ALL_MI_anno.tsv).
+
 # Best Practice
 
 Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) supports MMT-Bench now! **We strongly recommend using [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) for its useful features and ready-to-use LVLM implementations**.
